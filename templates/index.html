@@ -8,6 +8,23 @@
 </head>
 <body>
     <h1>These are my friends</h1>
-    <p>Even if you are not ready for the day, it can't always be night</p>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Occupation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for one_friend in friends %}
+                <tr>
+                    <td>{{ one_friend.first_name}}</td>
+                    <td>{{ one_friend.last_name }}</td>
+                    <td>{{ one_friend.occupation }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
